@@ -1,0 +1,11 @@
+Install (Windows/Wine UT2004 dir = <UT>):
+1. Copy this folder to <UT>\AutoBot  (so you have <UT>\AutoBot\Classes\AutoBotMutator.uc)
+2. In <UT>\System\UT2004.ini under [Editor.EditorEngine] add:  EditPackages=AutoBot
+3. Delete <UT>\System\AutoBot.u if present, run:  <UT>\System\ucc.exe make
+4. Add to a botmatch: Instant Action -> Mutators -> AutoBot. Tune values in System\AutoBot.ini
+
+Mutators in this package (all offline-only):
+- AutoBot        : tunes stock bot stats (AutoBotMutator)
+- AutoBot Brain  : swaps bots to the custom controller (AutoBotSwapMutator)
+- AutoPlay       : F8 autopilot for your own character (AutoPlayMutator); bind: set Input F8 mutate AutoPlay
+Run order tip: first compile with only AutoBotMutator.uc if you hit many errors, then add the others back.
